@@ -149,7 +149,7 @@ for epoch in range(epochs):
 
         # convert to numpy array and convert from (2,) to (1,2)
         context_ix = np.array(context_ix)
-        context_ix = context_ix.reshape(1, 2)
+        context_ix = context_ix.reshape(1, context_wnd)
 
         # forward propagation (predict)
         params = forward(context_ix, theta)
